@@ -5,7 +5,6 @@ require('dotenv').config();
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
-const port = 8000;
 
 app.use(cors()); // to handle cross origin requests
 app.use(express.json()); // to parse json
@@ -44,7 +43,7 @@ app.post('/login', (req, res) => {
 		});
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);
 });
